@@ -30,6 +30,6 @@ public class UserService {
     public UserResponse addUser(UserRequest dto){
         User user = dto.toEntity(); // Entity로 변환
         User savedUser = userRepository.save(user);
-        return new UserResponse(savedUser.getId(), savedUser.getUsername(), savedUser.getPassword());
+        return new UserResponse(savedUser.getId(), savedUser.getUsername(), "회원 등록 성공");
     }
 }
