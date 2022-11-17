@@ -14,10 +14,10 @@ public class UserRequest {
     private String username;
     private String password;
 
-    public User toEntity() { // -> Article에 @Builder 추가
+    public User toEntity() {
         User user = User.builder()
                 .username(this.username)
-                .password(this.password) // title, content 두 개만 넣고도 article 구성 가능 -> @Builder로 인해
+                .password(this.password)
                 .build();
         return user;
     }
