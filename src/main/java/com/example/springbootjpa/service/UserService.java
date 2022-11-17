@@ -27,7 +27,7 @@ public class UserService {
         }
     }
 
-    public UserResponse add(UserRequest dto){
+    public UserResponse addUser(UserRequest dto){
         User user = dto.toEntity(); // Entity로 변환
         User savedUser = userRepository.save(user);
         return new UserResponse(savedUser.getId(), savedUser.getUsername(), savedUser.getPassword());

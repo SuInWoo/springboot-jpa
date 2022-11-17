@@ -24,7 +24,7 @@ public class UserRestController {
 
     @PostMapping("")
     public ResponseEntity<UserResponse> addArticle(@RequestBody UserRequest dto){
-        UserResponse response = userService.add(dto);
+        UserResponse response = userService.addUser(dto);
         return ResponseEntity.ok().body(response);
     }
 
